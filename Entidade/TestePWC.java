@@ -36,6 +36,9 @@ public class TestePWC {
 
          System.out.println("");
 
+         System.out.println("Exercicio 05 - Verifique se a string é um anagrama de um palindromo");
+        System.out.println("Dados do teste: racecar");
+        System.out.println("Saida: " + teste.seEPalindroma("racecar"));
 
 
         
@@ -103,7 +106,10 @@ public class TestePWC {
         return ponto;
     }
 
-    
+    public boolean seEPalindroma(String frase) {
+        return frase.toString().equals(new StringBuffer()
+                .append(frase.toString()).reverse().toString());
+    }
 
     
 
