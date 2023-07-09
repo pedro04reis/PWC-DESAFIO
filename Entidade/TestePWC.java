@@ -24,7 +24,13 @@ public class TestePWC {
 
         System.out.println("");
 
-       
+        System.out.println("Exercicio 03 - Substring palindroma mais longa");
+        System.out.println("Dados do teste: babad");
+        System.out.println("Saida: " + teste.palindromaMaisLonga("babad"));
+
+        System.out.println("");
+
+        
 
 
         
@@ -51,6 +57,30 @@ public class TestePWC {
         return concatenarBuffer.toString();
     }
 
+    
+    public String palindromaMaisLonga(String texto) {
+
+        List<Character> listaDosCaracteres = new ArrayList<>();
+        texto.chars().forEach(letra -> listaDosCaracteres.add((char) letra));
+        StringBuffer StringFinal = new StringBuffer();
+
+        Integer quantidadeDeCaracter = listaDosCaracteres.size();
+
+        for (int i = 0; i < quantidadeDeCaracter; i++) {
+            StringFinal.append(listaDosCaracteres.get(i));
+            if (i > 1 && StringFinal.toString()
+                    .equals(new StringBuffer()
+                            .append(StringFinal.toString()).reverse().toString())) {
+
+                return StringFinal.toString();
+
+            }
+        }
+        return "Não é palindroma";
+
+    }
+
+    
     
     
 
