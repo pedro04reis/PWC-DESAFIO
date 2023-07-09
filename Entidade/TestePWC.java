@@ -32,6 +32,7 @@ public class TestePWC {
         int iterador = size - 1;
         for (int i = iterador; i >= 0; i--) {
             concatenar.append(arrayDoSplit.get(i) + " ");
+            
 
         }
         return concatenar.toString();
