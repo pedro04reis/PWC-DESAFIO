@@ -30,7 +30,12 @@ public class TestePWC {
 
         System.out.println("");
 
-        
+        System.out.println("Exercicio 04 - Coloque em maiuscula a letra maiuscula de cada frase");
+        System.out.println("Dados do teste: hello. how are you? i`m fine, thank you.");
+        System.out.println("Saida: " + teste.coloqueEmMaiusculaALetraDeCadaFrase("hello. how are you? i`m fine, thank you."));
+
+         System.out.println("");
+
 
 
         
@@ -82,6 +87,24 @@ public class TestePWC {
 
     
     
+    public String coloqueEmMaiusculaALetraDeCadaFrase(String frase) {
+        StringBuffer concatenarBuffer = new StringBuffer();
+        String[] splits = frase.split("[.]");
+        List<String> palavrasDesconstruida = new ArrayList<>(Arrays.asList(splits));
+        for (String palavra : palavrasDesconstruida) {
+            String string = palavra.strip();
+            String maiuscula = string.substring(0, 1).toUpperCase() + string.substring(1).toLowerCase();
+            concatenarBuffer.append(maiuscula + ". ");
+
+        }
+
+        String ponto = concatenarBuffer.toString();
+
+        return ponto;
+    }
+
+    
+
     
 
     
